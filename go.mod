@@ -1,4 +1,4 @@
-module goja_binding
+module github.com/keelii/goja_binding
 
 go 1.18
 
