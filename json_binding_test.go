@@ -4,6 +4,10 @@ import (
 	"testing"
 )
 
+func formatJson(code string) string {
+	return JsonStringify(JsonParse(code), nil, " ")
+}
+
 func TestJSONParse(t *testing.T) {
 	// parse
 	if val, exists := JsonParse(`{"a":1}`).(map[string]interface{})["a"]; exists && val.(int64) != 1 {
